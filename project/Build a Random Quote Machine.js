@@ -1,9 +1,9 @@
-function App(){
+function App() {
     const [quotes, setQuotes] = React.useState([]);
     const [randomQuote, setRandomQuote] = React.useState([]);
 
     React.useEffect(() => {
-        async function fetchData(){
+        async function fetchData() {
             const response = await fetch("https://type.fit/api/quotes");
             const data = await response.json();
 
@@ -13,9 +13,9 @@ function App(){
         }
         fetchData();
     }, []);
-        
 
-    return(
+
+    return (
         <div>hello
             {quotes.map(quote => {
                 <div>{quote.text}</div>
