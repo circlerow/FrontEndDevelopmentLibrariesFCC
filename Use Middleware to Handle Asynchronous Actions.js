@@ -1,10 +1,10 @@
 const REQUESTING_DATA = 'REQUESTING_DATA'//Dữ liệu yêu cầu
 const RECEIVED_DATA = 'RECEIVED_DATA'//Dữ liệu nhận được
 
-const requestingData = () => { return {type: REQUESTING_DATA} }
-const receivedData = (data) => { return {type: RECEIVED_DATA, users: data.users} }
+const requestingData = () => { return {type: REQUESTING_DATA} }//Yêu cầu dữ liệu
+const receivedData = (data) => { return {type: RECEIVED_DATA, users: data.users} }//Dữ liệu nhận được
 
-const handleAsync = () => {
+const handleAsync = () => {//Xử lý bất đồng bộ
   return function(dispatch) {
     // Dispatch request action here
     dispatch(requestingData());

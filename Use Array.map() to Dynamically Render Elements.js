@@ -22,7 +22,7 @@ const textAreaStyles = {
       });
     }
     handleChange(e) {
-      this.setState({
+      this.setState({ 
         userInput: e.target.value
       });
     }
